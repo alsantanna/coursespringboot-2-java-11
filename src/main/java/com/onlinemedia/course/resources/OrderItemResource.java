@@ -13,7 +13,7 @@ import com.onlinemedia.course.entities.OrderItem;
 import com.onlinemedia.course.services.OrderItemService;
 
 @RestController
-@RequestMapping(value="/orderItem")
+@RequestMapping(value="/ordersitem")
 public class OrderItemResource {
 	
 	@Autowired
