@@ -1,4 +1,4 @@
-package com.onlinemedia.course.Configuration;
+package com.onlinemedia.course.config;
 
 import java.util.Arrays;
 
@@ -11,17 +11,19 @@ import com.onlinemedia.course.entities.User;
 import com.onlinemedia.course.repositories.UserRepository;
 
 @Configuration
-@Profile("test") 	
-public class TestConfig implements CommandLineRunner{
-
+@Profile("test")
+public class TestConfig  implements CommandLineRunner {
+	
 	@Autowired
-    private UserRepository userRepository;
+	private UserRepository userRepostitory;
+
 	@Override
 	public void run(String... args) throws Exception {
 		User u1 = new User(null, "Maria Brown", "maria@gmail.com", "988888888", "123456");
 		User u2 = new User(null, "Alex Green", "alex@gmail.com", "977777777", "123456");
 		
-		userRepository.saveAll(Arrays.asList(u1, u2));
+		userRepostitory.saveAll(Arrays.asList(u1,u2));
 		
-	} 
+	}
+
 }

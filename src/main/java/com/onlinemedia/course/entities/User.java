@@ -7,9 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-
 @Entity
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -99,8 +96,5 @@ public class User implements Serializable {
 			return false;
 		return true;
 	}
-	@GetMapping(value="")
-	public String hello(ModelMap Model) {
-	    return "list";
-	}
+
 }
